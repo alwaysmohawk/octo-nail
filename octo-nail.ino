@@ -216,8 +216,7 @@ double printOutput = 0;
 
 //ota lol
 AsyncWebServer server(80);
-const char* ssid = "pink2";
-const char* password = "g0jay5g0";
+
 
 // server_input lol
 
