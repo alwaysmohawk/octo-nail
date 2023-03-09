@@ -1,3 +1,5 @@
+#include <NonBlockingRtttl.h>
+
 /*************old enail stuff**************/
 #include <SPI.h>
 #include "Adafruit_MAX31855.h"
@@ -25,6 +27,7 @@
 #include <lvgl.h>
 #include "ui.h"
 #include "ui_helpers.h"
+
 
 /*******************************************************************************
  * Start of Arduino_GFX setting
@@ -120,6 +123,10 @@ void my_disp_flush(lv_disp_drv_t* disp, const lv_area_t* area, lv_color_t* color
 #define ROTARY_ENCODER_STEPS 4
 //variable to hold a button click so that the read_encoder function can catch it
 bool buttonClickWaiting = 0;
+
+//rtttl
+#define BUZZER_PIN 18
+const char * dammit = "dammit:d=4,o=6,b=200:c7,8c7,d7,8d7,e7,g,8g,d7,8d7,e7,a,8a,d7,8d7,e7,f,8f,e7,8e7,d7,c7,d7,8d7,e7,g,8g,d7,8d7,e7,a,8a,d7,8d7,e7,f,8f,e7,8e7,d7";
 
 //instead of changing here, rather change numbers above
 AiEsp32RotaryEncoder rotaryEncoder = AiEsp32RotaryEncoder(ROTARY_ENCODER_A_PIN, ROTARY_ENCODER_B_PIN, ROTARY_ENCODER_BUTTON_PIN, ROTARY_ENCODER_VCC_PIN, ROTARY_ENCODER_STEPS);
@@ -317,6 +324,17 @@ void setup() {
   // while(!Serial);
   Serial.println("LVGL Hello World Demo");
 
+
+
+  //rtttl
+  delay(500);
+  pinMode(BUZZER_PIN, OUTPUT);
+  rtttl::begin(BUZZER_PIN, dammit);
+    while( !rtttl::done() ) 
+  {
+    rtttl::play();
+  }
+
 #ifdef GFX_EXTRA_PRE_INIT
   GFX_EXTRA_PRE_INIT();
 #endif
@@ -480,6 +498,9 @@ int tempToWriteToLabel = 69;
 int setpointFromArc = 0;
 //turn off the pid to initialize
 bool PIDrunning = 0;
+
+//rtttl
+bool notified = 0;
 void loop() {
   lv_timer_handler(); /* let the GUI do its work */
 
@@ -575,6 +596,20 @@ void loop() {
   // float yourInputFloat = readFile(SPIFFS, "/inputFloat.txt").toFloat();
   // Serial.print("*** Your inputFloat: ");
   // Serial.println(yourInputFloat);
+
+
+  //rtttl
+  //if the set temp is reached play dammit by blink-182
+  //int tempToWriteToLabel = 69;
+// int setpointFromArc = 0;
+  if(tempToWriteToLabel > setpointFromArc  && !notified){
+    notified = 1;
+   rtttl::begin(BUZZER_PIN, dammit);
+     while( !rtttl::done() ) 
+  {
+    rtttl::play();
+  }
+}
 }
 
 double readThermo() {
