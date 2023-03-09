@@ -1,3 +1,15 @@
 # octo-nail
  
 Welcome to my esp32 based e-nail
+
+Currently running on an ESP-32s2 (lolin s2 mini) devboard.
+
+Supports OTA firmware updates, and setting the target temperature via a (rudimentary) web interface.
+
+Still in the prototyping phase, but nearly ready to order PCBs.
+
+This project is less an exercise in developing a revolutionary product, and more a learning experience. That being said I haven't seen any mains-powered e-nails that actually impress me. The gold standar seems to be slapping an OTS PID controller and (way over spec'd) solid state relay in a box with xlr and AC power jacks. The first time I had an idea to build an e-nail was about ten years ago, but beyond some basic googling it never went anywhere. 
+
+More recently I've done a bit of hobby level work with ESP 32 (and previously 8266) boards, and have kind of been sucked in. I figured that an e-nail project would require me to learn a lot: embedded system/c/c++ development, open source code and licensing, code management, git, github, ota updates, schematic and pcb design, rotary encoders, thermocouples, heating coils, solid state relays, pid algorithms and tuning, spi, embedded display, embedded GUI, squareline studio, xlr connectors, mains voltage, effective prototyping, piezo buzzers, rtttl ringtones, larger-scale c/c++ projects, using open source libraries, web servers, input from web servers, esp-idf, youtube videos, sharing on social media, reliability, signal interference, Arduino_GFX and TFT_eSPI libraries, the list goes on...
+
+If you've read this far thank you for your interest, I'd love to hear from you with comments, criticism or ideas. The sky is the limit with this project. 
