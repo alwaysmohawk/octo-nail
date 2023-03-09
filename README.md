@@ -1,6 +1,4 @@
-# octo-nail
- 
-Welcome to my esp32 based e-nail
+<img width="1136" alt="Screenshot 2023-03-09 at 6 23 22 PM" src="https://user-images.githubusercontent.com/77303173/224183178-4bfc4e5c-6dd7-4ff2-a909-5440e30c8144.png">
 
 [why octo-nail? I like octopuses]
 
