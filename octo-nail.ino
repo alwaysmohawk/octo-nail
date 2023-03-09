@@ -1,5 +1,8 @@
 #include <NonBlockingRtttl.h>
 
+//https://www.reddit.com/r/diyelectronics/comments/xpqu12/esp32s2_pinout_for_those_of_you_who_are_looking/
+//still don't entirely understand fspi, but it's working now at least https://www.reddit.com/r/esp32/comments/qbil1g/how_do_i_access_spi2_and_spi3_on_an_esp32s2saola/
+
 /*************old enail stuff**************/
 #include <SPI.h>
 #include "Adafruit_MAX31855.h"
@@ -19,6 +22,11 @@
 #define MAXDO 37
 #define MAXCS 39
 #define MAXCLK 5
+
+// noisy readings https://forums.adafruit.com/viewtopic.php?f=22&t=34978
+//slow readings https://forum.arduino.cc/t/thermocouple-time-response-assistance/439218/6
+//https://github.com/adafruit/Adafruit-MAX31855-library/issues/27
+//https://forums.ni.com/t5/LabVIEW-Interface-for-Arduino/Reading-SPI-of-MAX31855/td-p/3392471
 
 //server input lol
 #include <SPIFFS.h>
@@ -126,7 +134,7 @@ bool buttonClickWaiting = 0;
 
 //rtttl
 #define BUZZER_PIN 18
-const char * dammit = "dammit:d=4,o=6,b=200:c7,8c7,d7,8d7,e7,g,8g,d7,8d7,e7,a,8a,d7,8d7,e7,f,8f,e7,8e7,d7,c7,d7,8d7,e7,g,8g,d7,8d7,e7,a,8a,d7,8d7,e7,f,8f,e7,8e7,d7";
+const char* dammit = "dammit:d=4,o=6,b=200:c7,8c7,d7,8d7,e7,g,8g,d7,8d7,e7,a,8a,d7,8d7,e7,f,8f,e7,8e7,d7,c7,d7,8d7,e7,g,8g,d7,8d7,e7,a,8a,d7,8d7,e7,f,8f,e7,8e7,d7";
 
 //instead of changing here, rather change numbers above
 AiEsp32RotaryEncoder rotaryEncoder = AiEsp32RotaryEncoder(ROTARY_ENCODER_A_PIN, ROTARY_ENCODER_B_PIN, ROTARY_ENCODER_BUTTON_PIN, ROTARY_ENCODER_VCC_PIN, ROTARY_ENCODER_STEPS);
@@ -329,8 +337,7 @@ void setup() {
   delay(500);
   pinMode(BUZZER_PIN, OUTPUT);
   rtttl::begin(BUZZER_PIN, dammit);
-    while( !rtttl::done() ) 
-  {
+  while (!rtttl::done()) {
     rtttl::play();
   }
 
@@ -500,6 +507,11 @@ bool PIDrunning = 0;
 
 //rtttl
 bool notified = 0;
+
+//slow down serial output
+int serialCurrentTime = 0;
+int serialLastPostTime = 0;
+
 void loop() {
   lv_timer_handler(); /* let the GUI do its work */
 
@@ -511,8 +523,19 @@ void loop() {
   tempToWriteToLabel = temp;
   setpoint = setpointFromArc;
   myPID.Setpoint(setpoint);
-   Serial.print("setpoint: ");
-   Serial.println(setpoint);
+
+  /****************************************************************
+* serial print statements for debugging can go here, it will only
+* output to serial if it's been more than 1000ms since last post
+****************************************************************/
+
+  serialCurrentTime = millis();
+  if (serialCurrentTime - serialLastPostTime > 1000) {
+    Serial.print("setpoint: ");
+    Serial.println(setpoint);
+    serialLastPostTime = serialCurrentTime;
+  }
+
   lv_label_set_text_fmt(ui_actual, "%d", tempToWriteToLabel);
   lv_label_set_text_fmt(ui_targetAKAsetpoint, "%d", setpointFromArc);
 
@@ -551,7 +574,7 @@ void loop() {
   /*const*/ double output = 0;
   //sanity check to make sure thermocouple is working, and to make sure pid is "running"
   if (!isnan(input) && PIDrunning) output = myPID.Run(input);
-  
+
 
   printOutput = output / WindowSize * 100.000;
 
@@ -600,15 +623,14 @@ void loop() {
   //rtttl
   //if the set temp is reached play dammit by blink-182
   //int tempToWriteToLabel = 69;
-// int setpointFromArc = 0;
-  if(tempToWriteToLabel > setpointFromArc  && !notified){
+  // int setpointFromArc = 0;
+  if (tempToWriteToLabel > setpointFromArc && !notified) {
     notified = 1;
-   rtttl::begin(BUZZER_PIN, dammit);
-     while( !rtttl::done() ) 
-  {
-    rtttl::play();
+    rtttl::begin(BUZZER_PIN, dammit);
+    while (!rtttl::done()) {
+      rtttl::play();
+    }
   }
-}
 }
 
 double readThermo() {
