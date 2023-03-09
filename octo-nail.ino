@@ -9,7 +9,7 @@
 #include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 #include <AsyncElegantOTA.h>
-
+#include "wificred.h"
 //pid stuff
 #define RELAY_PIN 3
 //pot pin for testing
