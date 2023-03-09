@@ -482,8 +482,7 @@ int setpointFromArc = 0;
 bool PIDrunning = 0;
 void loop() {
   lv_timer_handler(); /* let the GUI do its work */
-  //Serial.println("welcome back bitches");
-  //Serial.println(bitches);
+
   //  Serial.print("encoder: ");
   //  Serial.println(rotaryEncoder.readEncoder());
   rotary_loop();
