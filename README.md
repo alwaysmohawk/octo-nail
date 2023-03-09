@@ -2,6 +2,8 @@
  
 Welcome to my esp32 based e-nail
 
+[why octo-nail? I like octopuses]
+
 Currently running on an ESP-32s2 (lolin s2 mini) devboard.
 
 Supports OTA firmware updates, and setting the target temperature via a (rudimentary) web interface.
