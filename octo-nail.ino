@@ -134,7 +134,8 @@ bool buttonClickWaiting = 0;
 
 //rtttl
 #define BUZZER_PIN 18
-const char* dammit = "dammit:d=4,o=6,b=200:c7,8c7,d7,8d7,e7,g,8g,d7,8d7,e7,a,8a,d7,8d7,e7,f,8f,e7,8e7,d7,c7,d7,8d7,e7,g,8g,d7,8d7,e7,a,8a,d7,8d7,e7,f,8f,e7,8e7,d7";
+const char * dammit = "dammit:d=4,o=6,b=200:c7,8c7,d7,8d7,e7,g,8g,d7,8d7,e7,a,8a,d7,8d7,e7,f,8f,e7,8e7,d7,c7,d7,8d7,e7,g,8g,d7,8d7,e7,a,8a,d7,8d7,e7,f,8f,e7,8e7,d7";
+const char * kimPossible = "kimPossible:d=16,o=5,b=200:d6,8p,d6,8p,f6,32p,d6";
 
 //instead of changing here, rather change numbers above
 AiEsp32RotaryEncoder rotaryEncoder = AiEsp32RotaryEncoder(ROTARY_ENCODER_A_PIN, ROTARY_ENCODER_B_PIN, ROTARY_ENCODER_BUTTON_PIN, ROTARY_ENCODER_VCC_PIN, ROTARY_ENCODER_STEPS);
@@ -336,7 +337,7 @@ void setup() {
   //rtttl
   delay(500);
   pinMode(BUZZER_PIN, OUTPUT);
-  rtttl::begin(BUZZER_PIN, dammit);
+  rtttl::begin(BUZZER_PIN, kimPossible);
   while (!rtttl::done()) {
     rtttl::play();
   }
