@@ -13,3 +13,7 @@ This project is less an exercise in developing a revolutionary product, and more
 More recently I've done a bit of hobby level work with ESP 32 (and previously 8266) boards, and have kind of been sucked in. I figured that an e-nail project would require me to learn a lot: embedded system/c/c++ development, open source code and licensing, code management, git, github, ota updates, schematic and pcb design, rotary encoders, thermocouples, heating coils, solid state relays, pid algorithms and tuning, spi, embedded display, embedded GUI, squareline studio, xlr connectors, mains voltage, effective prototyping, piezo buzzers, rtttl ringtones, larger-scale c/c++ projects, using open source libraries, web servers, input from web servers, esp-idf, youtube videos, sharing on social media, reliability, signal interference, Arduino_GFX and TFT_eSPI libraries, the list goes on...
 
 If you've read this far thank you for your interest, I'd love to hear from you with comments, criticism or ideas. The sky is the limit with this project. 
+
+
+# update 10 Mar 2023
+I rebuilt the circuit on a different breadboard, both to clean it up, and to make sure my documentation & pinout was accurate. I started porting the code to platformio, but at least one of the libraries has issues. They seem to be related to the order in which things are declared, which in Arduino IDE doesn't seem to matter.
