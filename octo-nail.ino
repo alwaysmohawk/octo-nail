@@ -22,7 +22,7 @@
 //thermocouple amp stuff
 #define MAXDO 37
 #define MAXCS 39
-#define MAXCLK 5
+#define MAXCLK 40
 
 // noisy readings https://forums.adafruit.com/viewtopic.php?f=22&t=34978
 //slow readings https://forum.arduino.cc/t/thermocouple-time-response-assistance/439218/6
@@ -63,7 +63,7 @@ Arduino_DataBus* bus = create_default_Arduino_DataBus();
 //   0 /* col offset 2 */, 0 /* row offset 2 */,
 //   false /* BGR */);
 
-//for the 240, finally got it, it was a 16 bit display baybee
+//for the 240, finally got it, needed to set the colour to 16 bit swap
 
 // Arduino_GFX *gfx = new Arduino_ST7789(
 //   bus,33 /* RST */, 0 /* rotation */, true /* IPS */,
@@ -79,7 +79,7 @@ Arduino_GFX* gfx = new Arduino_ST7789(bus, 33, 1 /*rot.*/, true, 240, 240);
 
 #include "lvgl.h"
 /* Change to your screen resolution */
-//idk what these are for, or if i'm supposed to do anything with them lol
+//set in lvgl.h
 static uint32_t screenWidth;
 static uint32_t screenHeight;
 static lv_disp_draw_buf_t draw_buf;
@@ -122,7 +122,7 @@ bool buttonClickWaiting = 0;
 const char * dammit = "dammit:d=4,o=6,b=200:c7,8c7,d7,8d7,e7,g,8g,d7,8d7,e7,a,8a,d7,8d7,e7,f,8f,e7,8e7,d7,c7,d7,8d7,e7,g,8g,d7,8d7,e7,a,8a,d7,8d7,e7,f,8f,e7,8e7,d7";
 const char * kimPossible = "kimPossible:d=16,o=5,b=200:d6,8p,d6,8p,f6,32p,d6";
 
-//instead of changing here, rather change numbers above
+//initialize the rotary encoder
 AiEsp32RotaryEncoder rotaryEncoder = AiEsp32RotaryEncoder(ROTARY_ENCODER_A_PIN, ROTARY_ENCODER_B_PIN, ROTARY_ENCODER_BUTTON_PIN, ROTARY_ENCODER_VCC_PIN, ROTARY_ENCODER_STEPS);
 
 void rotary_onButtonClick() {
@@ -170,26 +170,6 @@ lv_group_t* g;
 
 
 // /*************old enail stuff**************/
-// #include <SPI.h>
-// #include "Adafruit_MAX31855.h"
-// #include <PID_v2.h>
-// //ota lol
-// #include <WiFi.h>
-// #include <AsyncTCP.h>
-// #include <ESPAsyncWebServer.h>
-// #include <AsyncElegantOTA.h>
-
-// //pid stuff
-// #define PIN_INPUT 6
-// #define RELAY_PIN 3
-
-// //thermocouple amp stuff
-// #define MAXDO 37
-// #define MAXCS 39
-// #define MAXCLK 35
-
-// //server input lol
-// #include <SPIFFS.h>
 
 //pid
 // Specify the links and initial tuning parameters
@@ -202,6 +182,8 @@ unsigned long windowStartTime;
 
 //thermocouple
 Adafruit_MAX31855 thermocouple(MAXCLK, MAXCS, MAXDO);
+
+//tried to initialize with just the chip select to use hwspi, but that didn't work
 //Adafruit_MAX31855 thermocouple(MAXCS);
 
 double temp = 0;
@@ -213,8 +195,6 @@ AsyncWebServer server(80);
 
 
 // server_input lol
-
-
 const char* PARAM_STRING = "inputString";
 const char* PARAM_INT = "inputInt";
 const char* PARAM_FLOAT = "inputFloat";
@@ -300,15 +280,6 @@ String processor(const String& var) {
 }
 
 
-
-
-
-
-
-
-
-
-
 /***************************** S E T U P ****************************/
 void setup() {
   //SPI.setDataMode(2);
@@ -317,7 +288,8 @@ void setup() {
   // while(!Serial);
   Serial.println("LVGL Hello World Demo");
 
-
+ pinMode(15, OUTPUT);
+ digitalWrite(15,HIGH);
 
   //rtttl
   delay(500);
@@ -498,6 +470,7 @@ bool notified = 0;
 int serialCurrentTime = 0;
 int serialLastPostTime = 0;
 
+bool led = 0;
 void loop() {
   lv_timer_handler(); /* let the GUI do its work */
 
@@ -520,6 +493,8 @@ void loop() {
     Serial.print("setpoint: ");
     Serial.println(setpoint);
     serialLastPostTime = serialCurrentTime;
+    digitalWrite(15,led);
+    led++;
   }
 
   lv_label_set_text_fmt(ui_actual, "%d", tempToWriteToLabel);
