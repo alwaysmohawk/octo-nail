@@ -14,8 +14,32 @@
 #include <ESPAsyncWebServer.h>
 #include <AsyncElegantOTA.h>
 #include "wificred.h"
+
+//server input lol
+#include <SPIFFS.h>
+
+//lvgl
+#include <lvgl.h>
+#include "ui.h"
+#include "ui_helpers.h"
+#include "lvgl.h"
+
+//display driver, Arduino_GFX
+#include <Arduino_GFX_Library.h>
+
+//rotary encoder
+#include "AiEsp32RotaryEncoder.h"
+
+
+
+#include "Arduino.h" //i feel like this probably doesn't need to be here...
+
+
+/**********************************************************************************************************************/
+/*************************************************Pin definitions******************************************************/
 //pid stuff
 #define RELAY_PIN 3
+
 //pot pin for testing
 #define PIN_INPUT 6
 
@@ -24,35 +48,35 @@
 #define MAXCS 39
 #define MAXCLK 40
 
+//rotary encoder
+#define ROTARY_ENCODER_A_PIN 2
+#define ROTARY_ENCODER_B_PIN 1
+#define ROTARY_ENCODER_BUTTON_PIN 4
+#define ROTARY_ENCODER_VCC_PIN -1 /* 27 put -1 of Rotary encoder Vcc is connected directly to 3,3V; else you can use declared output pin for powering rotary encoder */
+
+//Arduino_GFX
+#define GFX_BL DF_GFX_BL  // default backlight pin, you may replace DF_GFX_BL to actual backlight pin
+
+//rtttl
+#define BUZZER_PIN 18
+
 // noisy readings https://forums.adafruit.com/viewtopic.php?f=22&t=34978
 //slow readings https://forum.arduino.cc/t/thermocouple-time-response-assistance/439218/6
 //https://github.com/adafruit/Adafruit-MAX31855-library/issues/27
 //https://forums.ni.com/t5/LabVIEW-Interface-for-Arduino/Reading-SPI-of-MAX31855/td-p/3392471
 
-//server input lol
-#include <SPIFFS.h>
-
-
-#include <lvgl.h>
-#include "ui.h"
-#include "ui_helpers.h"
 
 
 /*******************************************************************************
  * Start of Arduino_GFX setting
- *
  * Arduino_GFX try to find the settings depends on selected board in Arduino IDE
  * ESP32-S2 various dev board  : CS: 34, DC: 38, RST: 33, BL: 21, SCK: 36, MOSI: 35, MISO: nil
  ******************************************************************************/
-#include <Arduino_GFX_Library.h>
-
-#define GFX_BL DF_GFX_BL  // default backlight pin, you may replace DF_GFX_BL to actual backlight pin
 
 /* More data bus class: https://github.com/moononournation/Arduino_GFX/wiki/Data-Bus-Class */
 Arduino_DataBus* bus = create_default_Arduino_DataBus();
 
 /* More display class: https://github.com/moononournation/Arduino_GFX/wiki/Display-Class */
-//Arduino_GFX *gfx = new Arduino_ILI9341(bus, DF_GFX_RST, 0 /* rotation */, false /* IPS */);
 
 //this one works for the bigger colour display
 //my turn THIS ONE BAYBEEE
@@ -63,7 +87,7 @@ Arduino_DataBus* bus = create_default_Arduino_DataBus();
 //   0 /* col offset 2 */, 0 /* row offset 2 */,
 //   false /* BGR */);
 
-//for the 240, finally got it, needed to set the colour to 16 bit swap
+//for the 240*240, finally got it, needed to set the colour to 16 bit swap
 
 // Arduino_GFX *gfx = new Arduino_ST7789(
 //   bus,33 /* RST */, 0 /* rotation */, true /* IPS */,
@@ -77,7 +101,7 @@ Arduino_GFX* gfx = new Arduino_ST7789(bus, 33, 1 /*rot.*/, true, 240, 240);
  ******************************************************************************/
 
 
-#include "lvgl.h"
+
 /* Change to your screen resolution */
 //set in lvgl.h
 static uint32_t screenWidth;
@@ -101,14 +125,6 @@ void my_disp_flush(lv_disp_drv_t* disp, const lv_area_t* area, lv_color_t* color
 
 //rotary encoder stuff
 
-#include "AiEsp32RotaryEncoder.h"
-#include "Arduino.h"
-
-#define ROTARY_ENCODER_A_PIN 2
-#define ROTARY_ENCODER_B_PIN 1
-#define ROTARY_ENCODER_BUTTON_PIN 4
-#define ROTARY_ENCODER_VCC_PIN -1 /* 27 put -1 of Rotary encoder Vcc is connected directly to 3,3V; else you can use declared output pin for powering rotary encoder */
-
 //depending on your encoder - try 1,2 or 4 to get expected behaviour
 //#define ROTARY_ENCODER_STEPS 1
 //#define ROTARY_ENCODER_STEPS 2
@@ -118,7 +134,7 @@ void my_disp_flush(lv_disp_drv_t* disp, const lv_area_t* area, lv_color_t* color
 bool buttonClickWaiting = 0;
 
 //rtttl
-#define BUZZER_PIN 18
+
 const char * dammit = "dammit:d=4,o=6,b=200:c7,8c7,d7,8d7,e7,g,8g,d7,8d7,e7,a,8a,d7,8d7,e7,f,8f,e7,8e7,d7,c7,d7,8d7,e7,g,8g,d7,8d7,e7,a,8a,d7,8d7,e7,f,8f,e7,8e7,d7";
 const char * kimPossible = "kimPossible:d=16,o=5,b=200:d6,8p,d6,8p,f6,32p,d6";
 
@@ -344,7 +360,7 @@ void setup() {
     /*Register the driver in LVGL and save the created input device object*/
     lv_indev_t* my_indev = lv_indev_drv_register(&indev_drv);
 
-
+    //this really messed me up. you need to create the group after creating the display
     lv_group_t* g = lv_group_create();
     lv_group_set_default(g);
     lv_indev_set_group(my_indev, g);
@@ -458,6 +474,15 @@ void setup() {
 }
 
 /**********************************l o o p*****************************************************************************/
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+
+//some late variables... these should be moved up
 int tempToWriteToLabel = 69;
 int setpointFromArc = 0;
 //turn off the pid to initialize
@@ -511,25 +536,6 @@ void loop() {
   pee = map(average, 0, 8191, 10, 100);
   //Serial.print("temp: ");
   //Serial.println(temp);
-  /*  
-  if(temp < setpoint){
-    digitalWrite(3,HIGH);
-  }else if(temp >= setpoint){
-    digitalWrite(3,LOW);
-  }
-*/
-  //  draw(temp, setpoint, printOutput);
-  //  delay(100);
-
-  //  const double input = analogRead(PIN_INPUT);
-  //  const double output = myPID.Run(input);
-
-  // if (isnan(temp)) {
-  //   draw(0, 0, 0, 0);
-  //   digitalWrite(RELAY_PIN, LOW);
-  //   while (1)
-  //     ;
-  // };
 
   const double input = temp;
   /*const*/ double output = 0;
@@ -562,8 +568,6 @@ void loop() {
   // Serial.print("input:");
   // Serial.println(input);
 
-  // Serial.println(WiFi.localIP());
-
   myPID.SetTunings(pee, 0, 0);
 
 
@@ -583,8 +587,6 @@ void loop() {
 
   //rtttl
   //if the set temp is reached play dammit by blink-182
-  //int tempToWriteToLabel = 69;
-  // int setpointFromArc = 0;
   if (tempToWriteToLabel > setpointFromArc && !notified) {
     notified = 1;
     rtttl::begin(BUZZER_PIN, dammit);
