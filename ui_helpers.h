@@ -1,10 +1,10 @@
 // SquareLine LVGL GENERATED FILE
 // EDITOR VERSION: SquareLine Studio 1.2.1
 // LVGL VERSION: 8.2.0
-// PROJECT: 240240proj
+// PROJECT: octo_nail
 
-#ifndef _240240PROJ_UI_HELPERS_H
-#define _240240PROJ_UI_HELPERS_H
+#ifndef _OCTO_NAIL_UI_HELPERS_H
+#define _OCTO_NAIL_UI_HELPERS_H
 
 #include "ui.h"
 
