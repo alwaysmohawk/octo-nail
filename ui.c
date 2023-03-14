@@ -22,7 +22,9 @@ void ui_event_buttonForGoingToSettings( lv_event_t * e);
 lv_obj_t *ui_buttonForGoingToSettings;
 lv_obj_t *ui_octonailLabel;
 lv_obj_t *ui_settings;
+void ui_event_Roller2( lv_event_t * e);
 lv_obj_t *ui_Roller2;
+lv_obj_t *ui_Spinner2;
 
 ///////////////////// TEST LVGL SETTINGS ////////////////////
 #if LV_COLOR_DEPTH != 16
@@ -60,6 +62,12 @@ void ui_event_buttonForGoingToSettings( lv_event_t * e) {
     lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
 if ( event_code == LV_EVENT_CLICKED) {
       _ui_screen_change( ui_settings, LV_SCR_LOAD_ANIM_FADE_ON, 0, 0);
+}
+}
+void ui_event_Roller2( lv_event_t * e) {
+    lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
+if ( event_code == LV_EVENT_VALUE_CHANGED) {
+      _ui_screen_change( ui_home_, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0);
 }
 }
 
@@ -209,7 +217,7 @@ ui_settings = lv_obj_create(NULL);
 lv_obj_clear_flag( ui_settings, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
 
 ui_Roller2 = lv_roller_create(ui_settings);
-lv_roller_set_options( ui_Roller2, "ui\nchime\ncalibrate", LV_ROLLER_MODE_NORMAL );
+lv_roller_set_options( ui_Roller2, "ui\nchime\ncalibrate\nhome", LV_ROLLER_MODE_NORMAL );
 lv_obj_set_width( ui_Roller2, 240);
 lv_obj_set_height( ui_Roller2, 240);
 lv_obj_set_align( ui_Roller2, LV_ALIGN_CENTER );
@@ -229,6 +237,16 @@ lv_obj_set_style_shadow_color(ui_Roller2, lv_color_hex(0x000000), LV_PART_SELECT
 lv_obj_set_style_shadow_opa(ui_Roller2, 255, LV_PART_SELECTED| LV_STATE_DEFAULT);
 lv_obj_set_style_shadow_width(ui_Roller2, 100, LV_PART_SELECTED| LV_STATE_DEFAULT);
 lv_obj_set_style_shadow_spread(ui_Roller2, 15, LV_PART_SELECTED| LV_STATE_DEFAULT);
+
+ui_Spinner2 = lv_spinner_create(ui_settings,1000,90);
+lv_obj_set_width( ui_Spinner2, 31);
+lv_obj_set_height( ui_Spinner2, 33);
+lv_obj_set_x( ui_Spinner2, 14 );
+lv_obj_set_y( ui_Spinner2, -74 );
+lv_obj_set_align( ui_Spinner2, LV_ALIGN_CENTER );
+lv_obj_clear_flag( ui_Spinner2, LV_OBJ_FLAG_CLICKABLE );    /// Flags
+
+lv_obj_add_event_cb(ui_Roller2, ui_event_Roller2, LV_EVENT_ALL, NULL);
 
 }
 

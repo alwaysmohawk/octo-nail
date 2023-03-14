@@ -373,7 +373,24 @@ void setup() {
 
     //can't add the obj to the group until the ui is initialized
     lv_group_add_obj(g, ui_tempArc);
+    
     Serial.println("Setup done");
+
+//i think what i gotta do is add the objs of the setting screen when switching to the setting screen, then vice versa, actually maybe just the roller and slider?
+
+    // this is how it was
+    // //this really messed me up. you need to create the group after creating the display
+    // lv_group_t* g = lv_group_create();
+    // lv_group_set_default(g);
+    // lv_indev_set_group(my_indev, g);
+
+    // /* Init SquareLine prepared UI */
+    // ui_init();
+
+    // //can't add the obj to the group until the ui is initialized
+    // lv_group_add_obj(g, ui_tempArc);
+    
+    // Serial.println("Setup done");
 
 
     /**********old enail setup*********/

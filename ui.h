@@ -36,7 +36,9 @@ void ui_event_buttonForGoingToSettings( lv_event_t * e);
 extern lv_obj_t *ui_buttonForGoingToSettings;
 extern lv_obj_t *ui_octonailLabel;
 extern lv_obj_t *ui_settings;
+void ui_event_Roller2( lv_event_t * e);
 extern lv_obj_t *ui_Roller2;
+extern lv_obj_t *ui_Spinner2;
 
 void getNewSetpoint(lv_event_t * e);
 void runDaPID(lv_event_t * e);
