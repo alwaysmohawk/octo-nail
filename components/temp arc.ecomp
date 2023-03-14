@@ -1,0 +1,1491 @@
+{
+  "guid": "GUID41647898-433569S321252",
+  "deepid": 1408565498,
+  "locked": false,
+  "properties": [
+    {
+      "nid": -1065872088,
+      "strtype": "OBJECT/Name",
+      "strval": "temp arc",
+      "InheritedType": 10
+    },
+    {
+      "nid": -1510764976,
+      "strtype": "OBJECT/Layout",
+      "InheritedType": 1
+    },
+    {
+      "Flow": 0,
+      "Wrap": false,
+      "Reversed": false,
+      "MainAlignment": 0,
+      "CrossAlignment": 0,
+      "TrackAlignment": 0,
+      "LayoutType": 0,
+      "nid": -336880909,
+      "strtype": "OBJECT/Layout_type",
+      "strval": "No_layout",
+      "InheritedType": 13
+    },
+    {
+      "nid": -461979035,
+      "flags": 1048576,
+      "strtype": "OBJECT/Transform",
+      "InheritedType": 1
+    },
+    {
+      "nid": -2074828982,
+      "flags": 17,
+      "strtype": "OBJECT/Position",
+      "intarray": [
+        0,
+        0
+      ],
+      "InheritedType": 7
+    },
+    {
+      "nid": 31982735,
+      "flags": 17,
+      "strtype": "OBJECT/Size",
+      "intarray": [
+        240,
+        240
+      ],
+      "InheritedType": 7
+    },
+    {
+      "nid": 110041672,
+      "strtype": "OBJECT/Align",
+      "strval": "CENTER",
+      "InheritedType": 3
+    },
+    {
+      "nid": 390954655,
+      "flags": 1048576,
+      "strtype": "OBJECT/Flags",
+      "InheritedType": 1
+    },
+    {
+      "nid": -498192692,
+      "strtype": "OBJECT/Hidden",
+      "strval": "False",
+      "InheritedType": 2
+    },
+    {
+      "nid": 449009667,
+      "strtype": "OBJECT/Clickable",
+      "strval": "True",
+      "InheritedType": 2
+    },
+    {
+      "nid": -1227896592,
+      "strtype": "OBJECT/Checkable",
+      "strval": "False",
+      "InheritedType": 2
+    },
+    {
+      "nid": -1605679815,
+      "strtype": "OBJECT/Press_lock",
+      "strval": "True",
+      "InheritedType": 2
+    },
+    {
+      "nid": -1817184590,
+      "strtype": "OBJECT/Click_focusable",
+      "strval": "True",
+      "InheritedType": 2
+    },
+    {
+      "nid": -8349066,
+      "strtype": "OBJECT/Adv_hittest",
+      "strval": "False",
+      "InheritedType": 2
+    },
+    {
+      "nid": -749654515,
+      "strtype": "OBJECT/Ignore_layout",
+      "strval": "False",
+      "InheritedType": 2
+    },
+    {
+      "nid": 1793210164,
+      "strtype": "OBJECT/Floating",
+      "strval": "False",
+      "InheritedType": 2
+    },
+    {
+      "nid": 1822995764,
+      "strtype": "OBJECT/Flex_in_new_track",
+      "strval": "False",
+      "InheritedType": 2
+    },
+    {
+      "nid": -1738696895,
+      "strtype": "OBJECT/Event_bubble",
+      "strval": "False",
+      "InheritedType": 2
+    },
+    {
+      "nid": -313521548,
+      "strtype": "OBJECT/Gesture_bubble",
+      "strval": "True",
+      "InheritedType": 2
+    },
+    {
+      "nid": 267850028,
+      "strtype": "OBJECT/Snappable",
+      "strval": "True",
+      "InheritedType": 2
+    },
+    {
+      "nid": 567043328,
+      "strtype": "OBJECT/Scrollable",
+      "strval": "True",
+      "InheritedType": 2
+    },
+    {
+      "nid": 124291914,
+      "strtype": "OBJECT/Scroll_elastic",
+      "strval": "True",
+      "InheritedType": 2
+    },
+    {
+      "nid": -1722403990,
+      "strtype": "OBJECT/Scroll_momentum",
+      "strval": "True",
+      "InheritedType": 2
+    },
+    {
+      "nid": 637049216,
+      "strtype": "OBJECT/Scroll_on_focus",
+      "strval": "False",
+      "InheritedType": 2
+    },
+    {
+      "nid": 23159113,
+      "strtype": "OBJECT/Scroll_chain",
+      "strval": "True",
+      "InheritedType": 2
+    },
+    {
+      "nid": -877643779,
+      "strtype": "OBJECT/Scroll_one",
+      "strval": "False",
+      "InheritedType": 2
+    },
+    {
+      "nid": -1308956771,
+      "strtype": "OBJECT/Scrollbar_mode",
+      "strval": "AUTO",
+      "InheritedType": 3
+    },
+    {
+      "nid": -371764707,
+      "strtype": "OBJECT/Scroll_direction",
+      "strval": "ALL",
+      "InheritedType": 3
+    },
+    {
+      "nid": -224510360,
+      "flags": 1048576,
+      "strtype": "OBJECT/States",
+      "InheritedType": 1
+    },
+    {
+      "nid": 469675829,
+      "strtype": "OBJECT/Checked",
+      "strval": "False",
+      "InheritedType": 2
+    },
+    {
+      "nid": -925709379,
+      "strtype": "OBJECT/Disabled",
+      "strval": "False",
+      "InheritedType": 2
+    },
+    {
+      "nid": -228075212,
+      "strtype": "OBJECT/Focused",
+      "strval": "False",
+      "InheritedType": 2
+    },
+    {
+      "nid": -1313064630,
+      "strtype": "OBJECT/Pressed",
+      "strval": "False",
+      "InheritedType": 2
+    },
+    {
+      "nid": -407360388,
+      "strtype": "ARC/Arc",
+      "InheritedType": 1
+    },
+    {
+      "nid": -734462721,
+      "strtype": "ARC/Range",
+      "intarray": [
+        120,
+        340
+      ],
+      "InheritedType": 7
+    },
+    {
+      "nid": 1653983028,
+      "strtype": "ARC/Value",
+      "integer": 220,
+      "InheritedType": 6
+    },
+    {
+      "nid": -69394801,
+      "strtype": "ARC/Bg_angles",
+      "intarray": [
+        120,
+        60
+      ],
+      "InheritedType": 7
+    },
+    {
+      "nid": -845591181,
+      "strtype": "ARC/Mode",
+      "strval": "NORMAL",
+      "InheritedType": 3
+    },
+    {
+      "nid": -1051692493,
+      "strtype": "ARC/Rotation",
+      "InheritedType": 6
+    },
+    {
+      "part": "lv.PART.MAIN",
+      "childs": [
+        {
+          "nid": -1095494039,
+          "strtype": "_style/StyleState",
+          "strval": "DEFAULT",
+          "childs": [
+            {
+              "nid": -1375128426,
+              "flags": 2097152,
+              "strtype": "_style/Background",
+              "InheritedType": 1
+            },
+            {
+              "nid": -1200432939,
+              "strtype": "_style/Bg_Radius",
+              "integer": 200,
+              "InheritedType": 6
+            },
+            {
+              "nid": -1638930685,
+              "strtype": "_style/Bg_Color",
+              "intarray": [
+                131,
+                4,
+                189,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -1488392405,
+              "strtype": "_style/Bg_gradiens_Color",
+              "intarray": [
+                6,
+                189,
+                229
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1229869485,
+              "flags": 2097152,
+              "strtype": "_style/Bg_gradient_params",
+              "intarray": [
+                0,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1543433674,
+              "strtype": "_style/Gradient direction",
+              "strval": "VER",
+              "InheritedType": 3
+            },
+            {
+              "nid": 278802389,
+              "flags": 2097152,
+              "strtype": "_style/Clip_corner",
+              "strval": "False",
+              "InheritedType": 2
+            },
+            {
+              "nid": -863941945,
+              "flags": 2097152,
+              "strtype": "_style/Background_image",
+              "InheritedType": 1
+            },
+            {
+              "nid": 1671621931,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image",
+              "strval": "",
+              "InheritedType": 5
+            },
+            {
+              "nid": -998014281,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image_opa",
+              "integer": 255,
+              "InheritedType": 6
+            },
+            {
+              "nid": 182477990,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image_Recolor",
+              "intarray": [
+                64,
+                64,
+                255,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -302545312,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image_Tiled",
+              "strval": "False",
+              "InheritedType": 2
+            },
+            {
+              "nid": -450925792,
+              "strtype": "_style/Border",
+              "InheritedType": 1
+            },
+            {
+              "nid": 1127878698,
+              "flags": 2097152,
+              "strtype": "_style/Border_Color",
+              "intarray": [
+                0,
+                0,
+                0,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -1300821092,
+              "flags": 2097152,
+              "strtype": "_style/Border width",
+              "InheritedType": 6
+            },
+            {
+              "nid": -1395292894,
+              "flags": 2097152,
+              "strtype": "_style/Border side",
+              "strval": "FULL",
+              "InheritedType": 3
+            },
+            {
+              "nid": 1743174932,
+              "strtype": "_style/Outline",
+              "InheritedType": 1
+            },
+            {
+              "nid": 1957426607,
+              "flags": 2097152,
+              "strtype": "_style/Outline_Color",
+              "intarray": [
+                0,
+                0,
+                0,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 2050640551,
+              "flags": 2097152,
+              "strtype": "_style/Outline_params",
+              "intarray": [
+                0,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 282138799,
+              "strtype": "_style/Shadow",
+              "InheritedType": 1
+            },
+            {
+              "nid": 678894198,
+              "flags": 2097152,
+              "strtype": "_style/Shadow_Color",
+              "intarray": [
+                0,
+                0,
+                0,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1584758283,
+              "flags": 2097152,
+              "strtype": "_style/Shadow_params",
+              "intarray": [
+                0,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -1569380623,
+              "flags": 2097152,
+              "strtype": "_style/Shadow_offset",
+              "intarray": [
+                0,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1288214387,
+              "strtype": "_style/Blend",
+              "InheritedType": 1
+            },
+            {
+              "nid": -1264230888,
+              "flags": 2097152,
+              "strtype": "_style/Blend mode",
+              "strval": "NORMAL",
+              "InheritedType": 3
+            },
+            {
+              "nid": -1833152052,
+              "flags": 2097152,
+              "strtype": "_style/Blend_opacity",
+              "integer": 255,
+              "InheritedType": 6
+            },
+            {
+              "nid": 754891947,
+              "strtype": "_style/Paddings",
+              "InheritedType": 1
+            },
+            {
+              "nid": 1066582482,
+              "strtype": "_style/Padding",
+              "intarray": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1865802577,
+              "flags": 2097152,
+              "strtype": "_style/Padding_RowCol",
+              "intarray": [
+                0,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -889121118,
+              "flags": 2097152,
+              "strtype": "_style/Arc",
+              "InheritedType": 1
+            },
+            {
+              "nid": -1648344340,
+              "strtype": "_style/Arc_Color",
+              "intarray": [
+                0,
+                255,
+                58,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1971722802,
+              "strtype": "_style/Arc_Width",
+              "integer": 10,
+              "InheritedType": 6
+            },
+            {
+              "nid": 504129531,
+              "flags": 2097152,
+              "strtype": "_style/Arc_Rounded",
+              "strval": "False",
+              "InheritedType": 2
+            },
+            {
+              "nid": -319655733,
+              "flags": 2097152,
+              "strtype": "_style/Arc_Image",
+              "strval": "",
+              "InheritedType": 5
+            }
+          ],
+          "InheritedType": 1
+        },
+        {
+          "nid": -1489953982,
+          "strtype": "_style/StyleState",
+          "strval": "CHECKED",
+          "InheritedType": 1
+        },
+        {
+          "nid": 23791484,
+          "strtype": "_style/StyleState",
+          "strval": "PRESSED",
+          "InheritedType": 1
+        },
+        {
+          "nid": 1673103737,
+          "strtype": "_style/StyleState",
+          "strval": "CHECKED|PRESSED",
+          "InheritedType": 1
+        },
+        {
+          "nid": 746744200,
+          "strtype": "_style/StyleState",
+          "strval": "DISABLED",
+          "InheritedType": 1
+        },
+        {
+          "nid": 1440688560,
+          "strtype": "_style/StyleState",
+          "strval": "FOCUSED",
+          "InheritedType": 1
+        }
+      ],
+      "nid": 1097373325,
+      "strtype": "ARC/Style_main",
+      "strval": "lv.PART.MAIN, Rectangle, Pad, Arc",
+      "InheritedType": 11
+    },
+    {
+      "part": "lv.PART.INDICATOR",
+      "childs": [
+        {
+          "nid": 1279690674,
+          "strtype": "_style/StyleState",
+          "strval": "DEFAULT",
+          "childs": [
+            {
+              "nid": -626888651,
+              "flags": 2097152,
+              "strtype": "_style/Background",
+              "InheritedType": 1
+            },
+            {
+              "nid": 1487615483,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Radius",
+              "InheritedType": 6
+            },
+            {
+              "nid": 1947367530,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Color",
+              "intarray": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1153756256,
+              "flags": 2097152,
+              "strtype": "_style/Bg_gradiens_Color",
+              "intarray": [
+                255,
+                255,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1807665059,
+              "flags": 2097152,
+              "strtype": "_style/Bg_gradient_params",
+              "intarray": [
+                0,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -259844223,
+              "flags": 2097152,
+              "strtype": "_style/Gradient direction",
+              "strval": "NONE",
+              "InheritedType": 3
+            },
+            {
+              "nid": -1695367785,
+              "flags": 2097152,
+              "strtype": "_style/Clip_corner",
+              "strval": "False",
+              "InheritedType": 2
+            },
+            {
+              "nid": 208529169,
+              "flags": 2097152,
+              "strtype": "_style/Background_image",
+              "InheritedType": 1
+            },
+            {
+              "nid": -709255122,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image",
+              "strval": "",
+              "InheritedType": 5
+            },
+            {
+              "nid": -192822956,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image_opa",
+              "integer": 255,
+              "InheritedType": 6
+            },
+            {
+              "nid": -502481001,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image_Recolor",
+              "intarray": [
+                64,
+                64,
+                255,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 2124819878,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image_Tiled",
+              "strval": "False",
+              "InheritedType": 2
+            },
+            {
+              "nid": 509852709,
+              "strtype": "_style/Border",
+              "InheritedType": 1
+            },
+            {
+              "nid": 2127103151,
+              "flags": 2097152,
+              "strtype": "_style/Border_Color",
+              "intarray": [
+                0,
+                0,
+                0,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1133648646,
+              "flags": 2097152,
+              "strtype": "_style/Border width",
+              "InheritedType": 6
+            },
+            {
+              "nid": 1976811587,
+              "flags": 2097152,
+              "strtype": "_style/Border side",
+              "strval": "FULL",
+              "InheritedType": 3
+            },
+            {
+              "nid": 1817317190,
+              "strtype": "_style/Outline",
+              "InheritedType": 1
+            },
+            {
+              "nid": -1128533961,
+              "flags": 2097152,
+              "strtype": "_style/Outline_Color",
+              "intarray": [
+                0,
+                0,
+                0,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1702659877,
+              "flags": 2097152,
+              "strtype": "_style/Outline_params",
+              "intarray": [
+                0,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 938648755,
+              "strtype": "_style/Shadow",
+              "InheritedType": 1
+            },
+            {
+              "nid": 1595625770,
+              "flags": 2097152,
+              "strtype": "_style/Shadow_Color",
+              "intarray": [
+                0,
+                0,
+                0,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -1160249963,
+              "flags": 2097152,
+              "strtype": "_style/Shadow_params",
+              "intarray": [
+                0,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 2031051789,
+              "flags": 2097152,
+              "strtype": "_style/Shadow_offset",
+              "intarray": [
+                0,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -341529093,
+              "strtype": "_style/Blend",
+              "InheritedType": 1
+            },
+            {
+              "nid": -1910580034,
+              "flags": 2097152,
+              "strtype": "_style/Blend mode",
+              "strval": "NORMAL",
+              "InheritedType": 3
+            },
+            {
+              "nid": 1888860778,
+              "flags": 2097152,
+              "strtype": "_style/Blend_opacity",
+              "integer": 255,
+              "InheritedType": 6
+            },
+            {
+              "nid": -380397355,
+              "strtype": "_style/Paddings",
+              "InheritedType": 1
+            },
+            {
+              "nid": -1742253635,
+              "flags": 2097152,
+              "strtype": "_style/Padding",
+              "intarray": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1171818950,
+              "flags": 2097152,
+              "strtype": "_style/Padding_RowCol",
+              "intarray": [
+                0,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -1142962356,
+              "flags": 2097152,
+              "strtype": "_style/Arc",
+              "InheritedType": 1
+            },
+            {
+              "nid": -1014320760,
+              "strtype": "_style/Arc_Color",
+              "intarray": [
+                255,
+                0,
+                142,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 401417884,
+              "strtype": "_style/Arc_Width",
+              "integer": 10,
+              "InheritedType": 6
+            },
+            {
+              "nid": -1871853517,
+              "flags": 2097152,
+              "strtype": "_style/Arc_Rounded",
+              "strval": "False",
+              "InheritedType": 2
+            },
+            {
+              "nid": -1614157579,
+              "flags": 2097152,
+              "strtype": "_style/Arc_Image",
+              "strval": "",
+              "InheritedType": 5
+            }
+          ],
+          "InheritedType": 1
+        },
+        {
+          "nid": 73062575,
+          "strtype": "_style/StyleState",
+          "strval": "CHECKED",
+          "InheritedType": 1
+        },
+        {
+          "nid": -1074803149,
+          "strtype": "_style/StyleState",
+          "strval": "PRESSED",
+          "InheritedType": 1
+        },
+        {
+          "nid": -400262228,
+          "strtype": "_style/StyleState",
+          "strval": "CHECKED|PRESSED",
+          "InheritedType": 1
+        },
+        {
+          "nid": 1109518102,
+          "strtype": "_style/StyleState",
+          "strval": "DISABLED",
+          "InheritedType": 1
+        },
+        {
+          "nid": -1596597650,
+          "strtype": "_style/StyleState",
+          "strval": "FOCUSED",
+          "InheritedType": 1
+        }
+      ],
+      "nid": -1426742217,
+      "strtype": "ARC/Style_indicator",
+      "strval": "lv.PART.INDICATOR, Rectangle, Pad, Arc",
+      "InheritedType": 11
+    },
+    {
+      "part": "lv.PART.KNOB",
+      "childs": [
+        {
+          "nid": 532452255,
+          "strtype": "_style/StyleState",
+          "strval": "DEFAULT",
+          "childs": [
+            {
+              "nid": -449103245,
+              "flags": 2097152,
+              "strtype": "_style/Background",
+              "InheritedType": 1
+            },
+            {
+              "nid": -1207607007,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Radius",
+              "InheritedType": 6
+            },
+            {
+              "nid": 1374512620,
+              "strtype": "_style/Bg_Color",
+              "intarray": [
+                0,
+                25,
+                255,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -1833018614,
+              "flags": 2097152,
+              "strtype": "_style/Bg_gradiens_Color",
+              "intarray": [
+                255,
+                255,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1470148585,
+              "flags": 2097152,
+              "strtype": "_style/Bg_gradient_params",
+              "intarray": [
+                0,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 633036560,
+              "flags": 2097152,
+              "strtype": "_style/Gradient direction",
+              "strval": "NONE",
+              "InheritedType": 3
+            },
+            {
+              "nid": 2076075919,
+              "flags": 2097152,
+              "strtype": "_style/Clip_corner",
+              "strval": "False",
+              "InheritedType": 2
+            },
+            {
+              "nid": 995337587,
+              "flags": 2097152,
+              "strtype": "_style/Background_image",
+              "InheritedType": 1
+            },
+            {
+              "nid": 1424217559,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image",
+              "strval": "",
+              "InheritedType": 5
+            },
+            {
+              "nid": -1832166301,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image_opa",
+              "integer": 255,
+              "InheritedType": 6
+            },
+            {
+              "nid": -2099516700,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image_Recolor",
+              "intarray": [
+                64,
+                64,
+                255,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -23256963,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image_Tiled",
+              "strval": "False",
+              "InheritedType": 2
+            },
+            {
+              "nid": -931602461,
+              "strtype": "_style/Border",
+              "InheritedType": 1
+            },
+            {
+              "nid": -1571873951,
+              "flags": 2097152,
+              "strtype": "_style/Border_Color",
+              "intarray": [
+                0,
+                0,
+                0,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -2125604979,
+              "flags": 2097152,
+              "strtype": "_style/Border width",
+              "InheritedType": 6
+            },
+            {
+              "nid": 573729366,
+              "flags": 2097152,
+              "strtype": "_style/Border side",
+              "strval": "FULL",
+              "InheritedType": 3
+            },
+            {
+              "nid": -604300838,
+              "strtype": "_style/Outline",
+              "InheritedType": 1
+            },
+            {
+              "nid": -1473671872,
+              "strtype": "_style/Outline_Color",
+              "intarray": [
+                0,
+                0,
+                0,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -1948592977,
+              "strtype": "_style/Outline_params",
+              "intarray": [
+                2,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -496319161,
+              "strtype": "_style/Shadow",
+              "InheritedType": 1
+            },
+            {
+              "nid": -1986793954,
+              "strtype": "_style/Shadow_Color",
+              "intarray": [
+                0,
+                0,
+                0,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 528128709,
+              "strtype": "_style/Shadow_params",
+              "intarray": [
+                15,
+                3
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1960215952,
+              "flags": 2097152,
+              "strtype": "_style/Shadow_offset",
+              "intarray": [
+                0,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1248221902,
+              "strtype": "_style/Blend",
+              "InheritedType": 1
+            },
+            {
+              "nid": -771053236,
+              "flags": 2097152,
+              "strtype": "_style/Blend mode",
+              "strval": "NORMAL",
+              "InheritedType": 3
+            },
+            {
+              "nid": -1536768350,
+              "flags": 2097152,
+              "strtype": "_style/Blend_opacity",
+              "integer": 255,
+              "InheritedType": 6
+            },
+            {
+              "nid": 1634123153,
+              "strtype": "_style/Paddings",
+              "InheritedType": 1
+            },
+            {
+              "nid": 263690899,
+              "flags": 2097152,
+              "strtype": "_style/Padding",
+              "intarray": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 158824240,
+              "flags": 2097152,
+              "strtype": "_style/Padding_RowCol",
+              "intarray": [
+                0,
+                0
+              ],
+              "InheritedType": 7
+            }
+          ],
+          "InheritedType": 1
+        },
+        {
+          "nid": 972729807,
+          "strtype": "_style/StyleState",
+          "strval": "CHECKED",
+          "InheritedType": 1
+        },
+        {
+          "nid": 978090712,
+          "strtype": "_style/StyleState",
+          "strval": "PRESSED",
+          "InheritedType": 1
+        },
+        {
+          "nid": 2134460998,
+          "strtype": "_style/StyleState",
+          "strval": "CHECKED|PRESSED",
+          "InheritedType": 1
+        },
+        {
+          "nid": -1133796146,
+          "strtype": "_style/StyleState",
+          "strval": "DISABLED",
+          "InheritedType": 1
+        },
+        {
+          "nid": -1796271311,
+          "strtype": "_style/StyleState",
+          "strval": "FOCUSED",
+          "childs": [
+            {
+              "nid": -780257537,
+              "flags": 2097152,
+              "strtype": "_style/Background",
+              "InheritedType": 1
+            },
+            {
+              "nid": -1306279837,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Radius",
+              "InheritedType": 6
+            },
+            {
+              "nid": -2135465849,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Color",
+              "intarray": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -495649810,
+              "flags": 2097152,
+              "strtype": "_style/Bg_gradiens_Color",
+              "intarray": [
+                255,
+                255,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1282254944,
+              "flags": 2097152,
+              "strtype": "_style/Bg_gradient_params",
+              "intarray": [
+                0,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -829940040,
+              "flags": 2097152,
+              "strtype": "_style/Gradient direction",
+              "strval": "NONE",
+              "InheritedType": 3
+            },
+            {
+              "nid": 1326022215,
+              "flags": 2097152,
+              "strtype": "_style/Clip_corner",
+              "strval": "False",
+              "InheritedType": 2
+            },
+            {
+              "nid": 1373886292,
+              "flags": 2097152,
+              "strtype": "_style/Background_image",
+              "InheritedType": 1
+            },
+            {
+              "nid": 1607428433,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image",
+              "strval": "noimage",
+              "InheritedType": 5
+            },
+            {
+              "nid": 1584860695,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image_opa",
+              "integer": 255,
+              "InheritedType": 6
+            },
+            {
+              "nid": 1873674277,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image_Recolor",
+              "intarray": [
+                64,
+                64,
+                255,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1939003827,
+              "flags": 2097152,
+              "strtype": "_style/Bg_Image_Tiled",
+              "strval": "False",
+              "InheritedType": 2
+            },
+            {
+              "nid": 1523130385,
+              "strtype": "_style/Border",
+              "InheritedType": 1
+            },
+            {
+              "nid": 752922948,
+              "flags": 2097152,
+              "strtype": "_style/Border_Color",
+              "intarray": [
+                0,
+                0,
+                0,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -904696057,
+              "flags": 2097152,
+              "strtype": "_style/Border width",
+              "InheritedType": 6
+            },
+            {
+              "nid": 1303072256,
+              "flags": 2097152,
+              "strtype": "_style/Border side",
+              "strval": "FULL",
+              "InheritedType": 3
+            },
+            {
+              "nid": 18986528,
+              "strtype": "_style/Outline",
+              "InheritedType": 1
+            },
+            {
+              "nid": -363636703,
+              "flags": 2097152,
+              "strtype": "_style/Outline_Color",
+              "intarray": [
+                0,
+                0,
+                0,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -606440812,
+              "flags": 2097152,
+              "strtype": "_style/Outline_params",
+              "intarray": [
+                0,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 1028681721,
+              "strtype": "_style/Shadow",
+              "InheritedType": 1
+            },
+            {
+              "nid": -169555056,
+              "strtype": "_style/Shadow_Color",
+              "intarray": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -772260070,
+              "flags": 2097152,
+              "strtype": "_style/Shadow_params",
+              "intarray": [
+                0,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 705094851,
+              "flags": 2097152,
+              "strtype": "_style/Shadow_offset",
+              "intarray": [
+                0,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": -533687386,
+              "strtype": "_style/Blend",
+              "InheritedType": 1
+            },
+            {
+              "nid": -28631153,
+              "flags": 2097152,
+              "strtype": "_style/Blend mode",
+              "strval": "NORMAL",
+              "InheritedType": 3
+            },
+            {
+              "nid": -1388770729,
+              "flags": 2097152,
+              "strtype": "_style/Blend_opacity",
+              "integer": 255,
+              "InheritedType": 6
+            },
+            {
+              "nid": 1586588950,
+              "strtype": "_style/Paddings",
+              "InheritedType": 1
+            },
+            {
+              "nid": 1869166446,
+              "flags": 2097152,
+              "strtype": "_style/Padding",
+              "intarray": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "InheritedType": 7
+            },
+            {
+              "nid": 294990320,
+              "flags": 2097152,
+              "strtype": "_style/Padding_RowCol",
+              "intarray": [
+                0,
+                0
+              ],
+              "InheritedType": 7
+            }
+          ],
+          "InheritedType": 1
+        }
+      ],
+      "nid": 317995074,
+      "strtype": "ARC/Style_knob",
+      "strval": "lv.PART.KNOB, Rectangle, Pad, BGimg",
+      "InheritedType": 11
+    },
+    {
+      "disabled": false,
+      "nid": -371850989,
+      "flags": 1048576,
+      "strtype": "_event/EventHandler",
+      "strval": "VALUE_CHANGED",
+      "childs": [
+        {
+          "nid": 550151482,
+          "strtype": "_custom/name",
+          "strval": "Event2",
+          "InheritedType": 10
+        },
+        {
+          "nid": 591136485,
+          "strtype": "_custom/condition_C",
+          "strval": "",
+          "InheritedType": 10
+        },
+        {
+          "nid": 903618258,
+          "strtype": "_custom/condition_P",
+          "strval": "",
+          "InheritedType": 10
+        },
+        {
+          "nid": 651995953,
+          "strtype": "_event/action",
+          "strval": "SET TEXT VALUE FROM ARC",
+          "childs": [
+            {
+              "nid": -1865628360,
+              "strtype": "SET TEXT VALUE FROM ARC/Name",
+              "strval": "SET TEXT VALUE FROM ARC",
+              "InheritedType": 10
+            },
+            {
+              "nid": -2028169431,
+              "strtype": "SET TEXT VALUE FROM ARC/Call",
+              "strval": "SetTextValueArc( <{Target}>, event_struct.get_target(), \"<{Prefix}>\", \"<{Postfix}>\")",
+              "InheritedType": 10
+            },
+            {
+              "nid": 1340691759,
+              "strtype": "SET TEXT VALUE FROM ARC/CallC",
+              "strval": "_ui_arc_set_text_value( <{Target}>, target, \"<{Prefix}>\", \"<{Postfix}>\");",
+              "InheritedType": 10
+            },
+            {
+              "nid": -1058875870,
+              "strtype": "SET TEXT VALUE FROM ARC/Target",
+              "strval": "GUID37386985-269671S815260",
+              "InheritedType": 9
+            },
+            {
+              "nid": -838581332,
+              "strtype": "SET TEXT VALUE FROM ARC/Prefix",
+              "strval": "",
+              "InheritedType": 10
+            },
+            {
+              "nid": 1585260695,
+              "strtype": "SET TEXT VALUE FROM ARC/Postfix",
+              "strval": "",
+              "InheritedType": 10
+            }
+          ],
+          "InheritedType": 10
+        }
+      ],
+      "InheritedType": 4
+    }
+  ],
+  "saved_objtypeKey": "ARC"
+}
