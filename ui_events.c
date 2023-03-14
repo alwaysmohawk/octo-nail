@@ -4,7 +4,7 @@
 // PROJECT: 128160
 
 #include "ui.h"
-
+#include "octo-nail.h"
 void turn_on_nail(lv_event_t * e)
 {
 	// Your code here

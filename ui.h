@@ -37,14 +37,11 @@ extern lv_obj_t *ui_buttonForGoingToSettings;
 extern lv_obj_t *ui_octonailLabel;
 extern lv_obj_t *ui_settings;
 extern lv_obj_t *ui_Roller2;
-extern lv_obj_t *ui_Screen1;
-extern lv_obj_t *ui_Spinner1;
-extern lv_obj_t *ui_octoNailIsLoading;
 
 void getNewSetpoint(lv_event_t * e);
 void runDaPID(lv_event_t * e);
 
-extern bool PIDrunning;
+
 
 
 

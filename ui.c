@@ -23,9 +23,6 @@ lv_obj_t *ui_buttonForGoingToSettings;
 lv_obj_t *ui_octonailLabel;
 lv_obj_t *ui_settings;
 lv_obj_t *ui_Roller2;
-lv_obj_t *ui_Screen1;
-lv_obj_t *ui_Spinner1;
-lv_obj_t *ui_octoNailIsLoading;
 
 ///////////////////// TEST LVGL SETTINGS ////////////////////
 #if LV_COLOR_DEPTH != 16
@@ -62,7 +59,7 @@ if ( event_code == LV_EVENT_CLICKED) {
 void ui_event_buttonForGoingToSettings( lv_event_t * e) {
     lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
 if ( event_code == LV_EVENT_CLICKED) {
-      _ui_screen_change( ui_settings, LV_SCR_LOAD_ANIM_NONE, 500, 0);
+      _ui_screen_change( ui_settings, LV_SCR_LOAD_ANIM_FADE_ON, 0, 0);
 }
 }
 
@@ -234,29 +231,6 @@ lv_obj_set_style_shadow_width(ui_Roller2, 100, LV_PART_SELECTED| LV_STATE_DEFAUL
 lv_obj_set_style_shadow_spread(ui_Roller2, 15, LV_PART_SELECTED| LV_STATE_DEFAULT);
 
 }
-void ui_Screen1_screen_init(void)
-{
-ui_Screen1 = lv_obj_create(NULL);
-lv_obj_clear_flag( ui_Screen1, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
-
-ui_Spinner1 = lv_spinner_create(ui_Screen1,1000,90);
-lv_obj_set_width( ui_Spinner1, 240);
-lv_obj_set_height( ui_Spinner1, 240);
-lv_obj_set_align( ui_Spinner1, LV_ALIGN_CENTER );
-lv_obj_clear_flag( ui_Spinner1, LV_OBJ_FLAG_CLICKABLE );    /// Flags
-
-lv_obj_set_style_arc_color(ui_Spinner1, lv_color_hex(0x8304BD), LV_PART_INDICATOR | LV_STATE_DEFAULT );
-lv_obj_set_style_arc_opa(ui_Spinner1, 255, LV_PART_INDICATOR| LV_STATE_DEFAULT);
-lv_obj_set_style_arc_width(ui_Spinner1, 10, LV_PART_INDICATOR| LV_STATE_DEFAULT);
-
-ui_octoNailIsLoading = lv_label_create(ui_Screen1);
-lv_obj_set_width( ui_octoNailIsLoading, LV_SIZE_CONTENT);  /// 1
-lv_obj_set_height( ui_octoNailIsLoading, LV_SIZE_CONTENT);   /// 1
-lv_obj_set_align( ui_octoNailIsLoading, LV_ALIGN_CENTER );
-lv_label_set_text(ui_octoNailIsLoading,"octo-nail is loading");
-lv_obj_set_style_text_font(ui_octoNailIsLoading, &lv_font_montserrat_20, LV_PART_MAIN| LV_STATE_DEFAULT);
-
-}
 
 void ui_init( void )
 {LV_EVENT_GET_COMP_CHILD = lv_event_register_id();
@@ -266,6 +240,5 @@ lv_theme_t *theme = lv_theme_default_init(dispp, lv_palette_main(LV_PALETTE_BLUE
 lv_disp_set_theme(dispp, theme);
 ui_home__screen_init();
 ui_settings_screen_init();
-ui_Screen1_screen_init();
 lv_disp_load_scr( ui_home_);
 }
