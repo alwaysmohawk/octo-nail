@@ -97,7 +97,7 @@ Arduino_DataBus* bus = create_default_Arduino_DataBus();
 //Arduino_GFX* gfx = new Arduino_ST7789(bus, 33, 1 /*rot.*/, true, 240, 240);
 
 Arduino_GFX *gfx = new Arduino_GC9A01(
-  bus, 33 /* RST */, 0 /* rotation */, true /* IPS */);
+  bus, 33 /* RST */, 2 /* rotation */, true /* IPS */);
 
 /*******************************************************************************
  * End of Arduino_GFX setting
