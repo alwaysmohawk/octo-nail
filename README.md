@@ -1,16 +1,16 @@
-# update 21 mar 2023 - Latest PCB Renders!!
+## update 21 mar 2023 - Latest PCB Renders!!
 ![octo-nail pcb render](https://user-images.githubusercontent.com/77303173/226526907-99108d75-a079-4c98-af4f-e84791d6e445.PNG)
 ![octo-nail pcb render -rear](https://user-images.githubusercontent.com/77303173/226526909-b35d7bec-a3cf-4b6a-98d7-42a5cf39cd9f.PNG)
 
 
 
-# update 20 Mar 2023
+## update 20 Mar 2023
 rebuilt again on an even more compact breadboard. swapped out manual setup and v1 web server stuff for wifimanager. lost the ability to set temp via webui, and ota. but i think wifi manager will handle ota as well as config, and of course wifi setup
 
-# update 10 Mar 2023
+## update 10 Mar 2023
 I rebuilt the circuit on a different breadboard, both to clean it up, and to make sure my documentation & pinout was accurate. I started porting the code to platformio, but at least one of the libraries has issues. They seem to be related to the order in which things are declared, which in Arduino IDE doesn't seem to matter.
 
-## Introducing: octo-nail
+# Introducing: octo-nail
 
 <img width="1136" alt="Screenshot 2023-03-09 at 6 23 22 PM" src="https://user-images.githubusercontent.com/77303173/224183178-4bfc4e5c-6dd7-4ff2-a909-5440e30c8144.png">
 
