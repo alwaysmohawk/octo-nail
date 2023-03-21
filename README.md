@@ -17,3 +17,6 @@ If you've read this far thank you for your interest, I'd love to hear from you w
 
 # update 10 Mar 2023
 I rebuilt the circuit on a different breadboard, both to clean it up, and to make sure my documentation & pinout was accurate. I started porting the code to platformio, but at least one of the libraries has issues. They seem to be related to the order in which things are declared, which in Arduino IDE doesn't seem to matter.
+
+# update 20 Mar 2023
+rebuilt again on an even more compact breadboard. swapped out manual setup and v1 web server stuff for wifimanager. lost the ability to set temp via webui, and ota. but i think wifi manager will handle ota as well as config, and of course wifi setup
