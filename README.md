@@ -10,6 +10,8 @@ rebuilt again on an even more compact breadboard. swapped out manual setup and v
 # update 10 Mar 2023
 I rebuilt the circuit on a different breadboard, both to clean it up, and to make sure my documentation & pinout was accurate. I started porting the code to platformio, but at least one of the libraries has issues. They seem to be related to the order in which things are declared, which in Arduino IDE doesn't seem to matter.
 
+## Introducing: octo-nail
+
 <img width="1136" alt="Screenshot 2023-03-09 at 6 23 22 PM" src="https://user-images.githubusercontent.com/77303173/224183178-4bfc4e5c-6dd7-4ff2-a909-5440e30c8144.png">
 
 [why octo-nail? I like octopuses]
