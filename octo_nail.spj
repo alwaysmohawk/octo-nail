@@ -69,6 +69,7 @@
               },
               {
                 "nid": 1632105764,
+                "flags": 1048576,
                 "strtype": "OBJECT/Flags",
                 "InheritedType": 1
               },
@@ -194,6 +195,7 @@
               },
               {
                 "nid": 65429408,
+                "flags": 1048576,
                 "strtype": "OBJECT/States",
                 "InheritedType": 1
               },
@@ -223,6 +225,7 @@
               },
               {
                 "nid": -457845147,
+                "flags": 1048576,
                 "strtype": "ARC/Arc",
                 "InheritedType": 1
               },
@@ -856,13 +859,8 @@
                         "InheritedType": 1
                       },
                       {
-                        "nid": -990961705,
-                        "strtype": "_style/Shadow",
-                        "InheritedType": 1
-                      },
-                      {
-                        "nid": -637347849,
-                        "strtype": "_style/Shadow_Color",
+                        "nid": 429041349,
+                        "strtype": "_style/Outline_Color",
                         "intarray": [
                           255,
                           255,
@@ -870,6 +868,11 @@
                           255
                         ],
                         "InheritedType": 7
+                      },
+                      {
+                        "nid": -990961705,
+                        "strtype": "_style/Shadow",
+                        "InheritedType": 1
                       },
                       {
                         "nid": -1943003093,
@@ -3156,18 +3159,18 @@
                           {
                             "nid": -1986048749,
                             "strtype": "CHANGE SCREEN/Screen_to",
+                            "strval": "GUID5140202-436225S639252",
                             "InheritedType": 9
                           },
                           {
                             "nid": 315134212,
                             "strtype": "CHANGE SCREEN/Fade_mode",
-                            "strval": "FADE_ON",
+                            "strval": "NONE",
                             "InheritedType": 3
                           },
                           {
                             "nid": -1836813862,
                             "strtype": "CHANGE SCREEN/Speed",
-                            "integer": 500,
                             "InheritedType": 6
                           },
                           {
@@ -3591,7 +3594,7 @@
                       {
                         "nid": -1234861054,
                         "strtype": "CHANGE SCREEN/Fade_mode",
-                        "strval": "FADE_ON",
+                        "strval": "NONE",
                         "InheritedType": 3
                       },
                       {
@@ -4126,7 +4129,8 @@
                 "InheritedType": 11
               }
             ],
-            "saved_objtypeKey": "ROLLER"
+            "saved_objtypeKey": "ROLLER",
+            "tree_closed": true
           },
           {
             "guid": "GUID86492312-249078S711273",
@@ -4301,7 +4305,7 @@
               {
                 "disabled": false,
                 "nid": -1274385708,
-                "strtype": "SPINNER/EventHandler",
+                "strtype": "_event/EventHandler",
                 "strval": "CLICKED",
                 "childs": [
                   {
@@ -4489,8 +4493,15 @@
       }
     ],
     "locked": false,
-    "properties": [],
-    "saved_objtypeKey": null
+    "properties": [
+      {
+        "nid": 1704850685,
+        "strtype": "STARTEVENTS/Name",
+        "strval": "___initial_actions0",
+        "InheritedType": 10
+      }
+    ],
+    "saved_objtypeKey": "STARTEVENTS"
   },
   "animations": [],
   "info": {
@@ -4505,7 +4516,7 @@
     "description": "round 240x240 display, for enail?",
     "board": "Arduino with TFT_eSPI",
     "board_version": "v1.0.0",
-    "editor_version": "1.2.1",
+    "editor_version": "1.2.2",
     "image": "",
     "force_export_images": false,
     "pointfilter": false,
@@ -4514,7 +4525,7 @@
     "theme_color1": 5,
     "theme_color2": 0,
     "exportFolderPath": "/Users/alexander/github/octo-nail",
-    "backup_cnt": 653,
+    "backup_cnt": 1025,
     "autosave_cnt": 0,
     "lvgl_version": "8.2.0",
     "callfuncsexport": "C_FILE",

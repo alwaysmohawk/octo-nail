@@ -51,7 +51,7 @@ if ( event_code == LV_EVENT_CLICKED) {
 void ui_event_buttonForGoingToSettings( lv_event_t * e) {
     lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
 if ( event_code == LV_EVENT_CLICKED) {
-      _ui_screen_change( ui_settings, LV_SCR_LOAD_ANIM_FADE_ON, 0, 0);
+      _ui_screen_change( ui_settings, LV_SCR_LOAD_ANIM_NONE, 0, 0);
 }
 }
 void ui_event_octonailLabel( lv_event_t * e) {
