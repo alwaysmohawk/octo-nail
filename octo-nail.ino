@@ -101,7 +101,7 @@
   //Arduino_GFX* gfx = new Arduino_ST7789(bus, 33, 1 /*rot.*/, true, 240, 240);
 
   Arduino_GFX* gfx = new Arduino_GC9A01(
-    bus, 33 /* RST */, 2 /* rotation */, true /* IPS */);
+    bus, 33 /* RST */, 0 /* rotation */, true /* IPS */);
   //rotation seems to be a 90 deg multiplier
 //
 
@@ -428,7 +428,7 @@ void setup() {
     ui_init();
   //
   //can't add the obj to the group until the ui is initialized
-    lv_group_add_obj(g, ui_tempArc);
+    lv_group_add_obj(g, ui_tempArc1);
     //i think what i gotta do is add the objs of the setting screen when switching to the setting screen, then vice versa, actually maybe just the roller and slider?
   //
 
@@ -625,7 +625,7 @@ void loop() {
 //
 
 //process the setpoint from the arc
-  setpointFromArc = lv_arc_get_value(ui_tempArc);
+  setpointFromArc = lv_arc_get_value(ui_tempArc1);
   tempToWriteToLabel = temp;
   setpoint = setpointFromArc;
   myPID.Setpoint(setpoint);
@@ -680,7 +680,7 @@ void loop() {
     // Serial.println("800");
     digitalWrite(RELAY_PIN, LOW);
   } else {
-    // Serial.print("relay:");
+    // Serial.print("relay:"); 
     // Serial.println("200");
     digitalWrite(RELAY_PIN, HIGH);
   }
