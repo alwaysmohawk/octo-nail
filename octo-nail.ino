@@ -610,7 +610,7 @@ void loop() {
 
 //slow serial output for debugging/testing
   serialCurrentTime = millis();
-  if (serialCurrentTime - serialLastPostTime > 1000) {
+  if (serialCurrentTime - serialLastPostTime > 4000) {
     //setpoint
       // Serial.print("setpoint: ");
       // Serial.println(setpoint);

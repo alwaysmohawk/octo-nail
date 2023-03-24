@@ -18,6 +18,7 @@ void ui_event_power( lv_event_t * e);
 lv_obj_t *ui_power;
 void ui_event_buttonForGoingToSettings( lv_event_t * e);
 lv_obj_t *ui_buttonForGoingToSettings;
+void ui_event_octonailLabel( lv_event_t * e);
 lv_obj_t *ui_octonailLabel;
 lv_obj_t *ui_settings;
 lv_obj_t *ui_Roller2;
@@ -51,6 +52,12 @@ void ui_event_buttonForGoingToSettings( lv_event_t * e) {
     lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
 if ( event_code == LV_EVENT_CLICKED) {
       _ui_screen_change( ui_settings, LV_SCR_LOAD_ANIM_FADE_ON, 0, 0);
+}
+}
+void ui_event_octonailLabel( lv_event_t * e) {
+    lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
+if ( event_code == LV_EVENT_CLICKED) {
+      _ui_screen_change( ui_settings, LV_SCR_LOAD_ANIM_NONE, 0, 0);
 }
 }
 
@@ -190,6 +197,7 @@ lv_obj_set_style_text_font(ui_octonailLabel, &lv_font_montserrat_20, LV_PART_MAI
 
 lv_obj_add_event_cb(ui_targetAKAsetpoint, ui_event_targetAKAsetpoint, LV_EVENT_ALL, NULL);
 lv_obj_add_event_cb(ui_power, ui_event_power, LV_EVENT_ALL, NULL);
+lv_obj_add_event_cb(ui_octonailLabel, ui_event_octonailLabel, LV_EVENT_ALL, NULL);
 lv_obj_add_event_cb(ui_buttonForGoingToSettings, ui_event_buttonForGoingToSettings, LV_EVENT_ALL, NULL);
 
 }

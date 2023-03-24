@@ -36,6 +36,7 @@ void ui_event_power( lv_event_t * e);
 extern lv_obj_t *ui_power;
 void ui_event_buttonForGoingToSettings( lv_event_t * e);
 extern lv_obj_t *ui_buttonForGoingToSettings;
+void ui_event_octonailLabel( lv_event_t * e);
 extern lv_obj_t *ui_octonailLabel;
 extern lv_obj_t *ui_settings;
 extern lv_obj_t *ui_Roller2;
