@@ -200,7 +200,7 @@ lv_group_t* g;
 
 //pid
   // Specify the links and initial tuning parameters
-  double Kp = 8, Ki = 16, Kd = 18;
+  double Kp = 2, Ki = .01, Kd = .001;
   PID_v2 myPID(Kp, Ki, Kd, PID::Direct);
   double pee = 0;
   const int WindowSize = 1500;
