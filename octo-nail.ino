@@ -648,7 +648,7 @@ void loop() {
   }
   average = average / 30;
   //map the average and set pee equal to the result
-  pee = map(average, 0, 8191, 10, 100);
+  pee = 2;
 
   //HAVE I BEEN SETTING THE FG I AND D TO ZERO THIS WHOLE FUCKING TIME
   //this is what i was using ffs myPID.SetTunings(pee, 0, 0);
