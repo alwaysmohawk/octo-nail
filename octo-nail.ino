@@ -200,8 +200,8 @@ lv_group_t* g;
 
 //pid
   // Specify the links and initial tuning parameters
-  double Kp = 2, Ki = .01, Kd = .001;
-  PID_v2 myPID(Kp, Ki, Kd, PID::Direct);
+  double Kp = 2.2, Ki = 0.016, Kd = 0;
+  PID_v2 myPID(Kp, Ki, Kd, PID::Direct, PID::P_On::Measurement);
   double pee = 0;
   const int WindowSize = 1500;
   unsigned long windowStartTime;
@@ -357,7 +357,7 @@ void setup() {
   //serial
     Serial.begin(115200);
     // Serial.setDebugOutput(true);
-    while(!Serial);
+   // while(!Serial);
   //  
 
   //set pin modes
@@ -640,21 +640,21 @@ void loop() {
   temp = readThermo();
 //
 
-//get P value from pot 
-  //smooth out the reading with averages
-  int average = 0;
-  for (int i = 0; i < 30; i++) {
-    average = average + analogRead(6);
-  }
-  average = average / 30;
-  //map the average and set pee equal to the result
-  pee = 2;
+// //get P value from pot 
+//   //smooth out the reading with averages
+//   int average = 0;
+//   for (int i = 0; i < 30; i++) {
+//     average = average + analogRead(6);
+//   }
+//   average = average / 30;
+//   //map the average and set pee equal to the result
+//   pee = 2;
 
-  //HAVE I BEEN SETTING THE FG I AND D TO ZERO THIS WHOLE FUCKING TIME
-  //this is what i was using ffs myPID.SetTunings(pee, 0, 0);
-  //lets try actually using i and d...
-  myPID.SetTunings(pee, Ki, Kd);
-//
+//   //HAVE I BEEN SETTING THE FG I AND D TO ZERO THIS WHOLE FUCKING TIME
+//   //this is what i was using ffs myPID.SetTunings(pee, 0, 0);
+//   //lets try actually using i and d...
+//   //myPID.SetTunings(pee, Ki, Kd);
+// //
 
 //prepare variables for pid
   const double input = temp;
@@ -704,14 +704,13 @@ void loop() {
 //wifi manager
   wm.process();
 //
-//if the set temp is reached play dammit by blink-182
-  if (tempToWriteToLabel > setpointFromArc && !notified) {
-    notified = 1;
-    rtttl::begin(BUZZER_PIN, dammit);
-    while (!rtttl::done()) {
-      rtttl::play();
-    }
+// //if the set temp is reached play dammit by blink-182
+//   if (tempToWriteToLabel > setpointFromArc && !notified) {
+//     notified = 1;
+//     rtttl::begin(BUZZER_PIN, dammit);
+//     while (!rtttl::done()) {
+//       rtttl::play();
+//     }
   }
-//
-}
+
 
