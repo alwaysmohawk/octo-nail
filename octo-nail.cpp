@@ -196,14 +196,14 @@ lv_group_t* g;
 //wifi manager
   WiFiManager wm;
   
-//
+// 
 
 //pid
   // Specify the links and initial tuning parameters
-  double Kp = 2.3, Ki = 0.08, Kd = 0.000002;
-  PID_v2 myPID(Kp, Ki, Kd, PID::Direct, PID::P_On::Measurement);
+  double Kp = 3, Ki = 0.1, Kd = 0.0000001;
+  PID_v2 myPID(Kp, Ki, Kd, PID::Direct);
   double pee = 0;
-  const int WindowSize = 1500;
+  const int WindowSize = 100;
   unsigned long windowStartTime;
 //
 
