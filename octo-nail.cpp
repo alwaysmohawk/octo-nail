@@ -439,7 +439,7 @@ void setup() {
     //automatically connect using saved credentials if they exist
     //If connection fails it starts an access point with the specified name
     if(wm.autoConnect("octo-nail wifi setup")){
-        Serial.println("connected...yeey :)");
+        Serial.println("connected...yeey :D");
     }
     else {
         Serial.println("Configportal running");
